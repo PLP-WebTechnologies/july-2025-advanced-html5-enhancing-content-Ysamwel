@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhancing HTML5 Content & Mastering Forms</title>
+    <link rel="icon" type="image/png" href="search.png">
+</head>
+<body background="background.jpg">
+    <h1>
+        HANDLING LISTS, FORMS, TABLES AND MEDIA
+    </h1>
+    <h2>Tables</h2>
+    <p>In HTML, tables are used to display data in rows and columns. <br> They use tags like table 
+        (row),  (header cell), and (data cell). 
+        <br>Tables help organize structured information, such as schedules or price lists.</p>
+        <!--<h3>STUDENT PROFILE</h3>-->
+        <table border="3">
+            <caption>STUDENT PROFILE</caption>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Class</th>
+                    <th>Gender</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jane</td>
+                    <td>22yrs</td>
+                    <td>Cyber Security</td>
+                    <td>Female</td>
+                </tr>
+                <tr>
+                    <td>Caleb</td>
+                    <td>23yrs</td>
+                    <td>Computer Science</td>
+                    <td>Male</td>
+                </tr>
+                <tr>
+                    <td>Yvonne</td>
+                    <td>28yrs</td>
+                    <td>SoftWare Engineering</td>
+                    <td>Female</td>
+                </tr>
+                <tr>
+                    <td>Godfrey</td>
+                    <td>22yrs</td>
+                    <td>UI/UX Designer</td>
+                    <td>Male</td>
+                </tr>
+            </tbody>
+        </table><br>
+        <caption>Local image</caption>
+        <img src="pic.jpg" alt="My image" width="300" height="200">
+    <h2>Lists</h2>
+    <p>Lists organize items in order or groups. HTML has three main types: <br>unordered list (bullets)
+       <br>ordered list (numbers) <br>list (terms and definitions)</p>
+
+       <ul type="square">
+          <caption><b>UNORDERED LIST </b></caption>
+           <li>python</li>
+           <li>java</li>
+           <li>javascript</li>
+           <li>golang</li>
+       </ul>
+
+       <ol type="i">
+        <caption><b>ORDERED LIST </b></caption>
+        <li>React</li>
+        <li>Angular</li>
+        <li>Express</li>
+        <li>Flask</li>
+       </ol>
+
+       <dl style="color: aqua;">
+        <caption><b>DESCRIPTION LIST </b></caption>
+        <dt ><b>DOM</b></dt>
+        <dd>Document Object Model</dd>
+
+        <dt><b>HTML</b></dt>
+        <dd>HyperText Markup Language</dd>
+       </dl>
+
+
+
+       <h2>Media</h2>
+       <p>Media elements let us add multimedia to a webpage: <br>img tag for images 
+        <br>audio tag for sound, often with the controls attribute <br>video tag for videos,
+         also with playback controls <br>They make webpages more engaging and interactive.</p><br>
+         <caption>Linked Image</caption>
+         <img src="https://images.pexels.com/photos/31487010/pexels-photo-31487010.jpeg" alt="Its not local" width="300" height="200"><br><br>
+
+         <h4>Audio</h4>
+         <audio controls>
+            <source src="future-design-344320.mp3" type="audio/mpeg">
+         </audio><br><br>
+         <h4>Video</h4>
+         <video controls loop width="300">
+            <source src="video.mp4" type="video/mp4">
+         </video>
+    <h2>Forms</h2>
+         <p>Forms collect user input and send it to a server. <br>They use the form tag and include inputs like text fields, 
+            checkboxes, radio buttons,<br> dropdowns, and submit buttons. <br>Attributes like required, placeholder,
+             and pattern improve usability and validation.</p><br><br>
+             <form action="submit" method="post">
+                <fieldset>
+                    <legend>Personal Data</legend>
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter name" required minlength="10"><br><br>
+
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="example@mail.com" required><br><br>
+
+                    <label for="password">Password</label>
+                    <input type="text" id="password" name="password" required maxlength="15"><br><br>
+
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob"><br><br>
+
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" min="1" max="100">
+                    <br>
+                    <fieldset>
+      <legend>Preferences</legend>
+
+      <p>Gender:</p>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female">Female</label>
+      <br><br>
+
+      <p>Hobbies:</p>
+      <input type="checkbox" id="reading" name="hobby" value="reading">
+      <label for="reading">Reading</label>
+      <input type="checkbox" id="sports" name="hobby" value="sports">
+      <label for="sports">Sports</label>
+      <input type="checkbox" id="music" name="hobby" value="music">
+      <label for="music">Music</label>
+      <br><br>
+
+      <label for="country">Country:</label>
+      <select id="country" name="country">
+        <option value="kenya">Kenya</option>
+        <option value="uganda">Uganda</option>
+        <option value="tanzania">Tanzania</option>
+      </select>
+    </fieldset>
+    <br>
+
+    
+    <fieldset>
+      <legend>Additional Information</legend>
+
+      <label for="bio">Short Bio:</label><br>
+      <textarea id="bio" name="bio" rows="4" cols="40" placeholder="Tell us something about yourself..."></textarea><br><br>
+
+      <label for="resume">Upload Resume:</label>
+      <input type="file" id="resume" name="resume"><br><br>
+    </fieldset>
+    <br>
+
+   
+    <input type="submit" value="Submit Form">
+    <input type="reset" value="Reset Form">
+    <button type="button">Help</button>
+             </fieldset>
+             </form>
+
+</body>
+<footer>
+    <p>&copy; 2025 My Website. All rights reserved.</p>
+</footer>
+</html>
